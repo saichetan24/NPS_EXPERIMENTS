@@ -1,0 +1,50 @@
+EXP :  Configuration of FTP in Cisco packet tracer and verify the connection
+1. Set Up the Network Topology
+	Open Cisco Packet Tracer.
+	Add the following devices to the workspace:
+	One server (to act as the FTP server).
+	One or more PCs (to act as FTP clients).
+	One or more switches to connect devices (if needed).
+	Appropriate number of cables to connect the devices.
+2. Configure the IP Addresses
+	Assign the following IP addresses:
+	PC1: 10.0.0.1/24
+	PC2: 10.0.0.2/24 (if you have more than one PC)
+	Server: 10.0.0.3/24
+To assign IP addresses:
+	For each PC, click on the device and navigate to the Desktop tab.
+	Open the IP Configuration option and set:
+	PC1: IP address as 10.0.0.1, subnet mask 255.255.255.0
+	PC2 (if used): IP address as 10.0.0.2, subnet mask 255.255.255.0
+	For the Server, click the server device, go to the Desktop tab, and assign:
+	Server: IP address as 10.0.0.3, subnet mask 255.255.255.0
+3. Configure the Server (FTP Server)
+	Click on the server device.
+	Go to the Services tab.
+	From the list of services on the left, select FTP.
+	Ensure that the FTP service is turned ON.
+	Add FTP users by providing a username and password (e.g., admin / password).
+	Optionally, you can configure file settings such as upload/download permissions.
+4. Verify IP Connectivity
+	From any of the PCs, use the ping command in the Command Prompt to ensure connectivity to the server.
+	Example: From PC1, run ping 10.0.0.3 (to test connectivity to the server).
+	If the ping is successful, it confirms that the devices are on the same network and can communicate.
+5. Access FTP from Client PCs
+	Go to one of the PCs (FTP clients).
+	Open the Desktop tab and launch the Command Prompt.
+	Use the FTP command to connect to the server:
+bash
+Copy code
+ftp 10.0.0.3
+	When prompted, enter the username and password that you configured on the FTP server (e.g., admin / password).
+	Once logged in, you can use basic FTP commands to download or upload files:
+	To view files: ls or dir
+	To download a file: get filename
+	To upload a file: put filename
+6. Additional FTP Commands
+	Some useful FTP commands to test in Packet Tracer:
+	ls: Lists files in the current directory on the server.
+	get [filename]: Downloads a file from the server.
+	put [filename]: Uploads a file to the server.
+	bye: Disconnects from the FTP session. 
+

@@ -1,0 +1,78 @@
+EXP  6: IoT Smart Home automation using cisco packet tracer
+________________________________________
+1. Set Up the Basic Network Topology
+•	Open Cisco Packet Tracer.
+•	Add the following devices to your workspace:
+o	Wireless Router (to provide Wi-Fi connectivity).
+o	Server (to manage the IoT devices).
+o	PC (to monitor or control devices via the web or an IoT monitor).
+o	Smart IoT Devices:
+	Fan
+	Light
+	Garage Door
+	Another Light
+o	Connect the devices using the wireless network.
+________________________________________
+2. Configure the Wireless Router
+•	Click on the wireless router and go to the GUI tab.
+•	Under Basic Setup, configure the following:
+o	IP Address: 192.168.10.1
+o	Subnet Mask: 255.255.255.0
+o	SSID: hello (Wi-Fi network name).
+o	Wireless Security: Enable WPA2-PSK and set a password (e.g., "password123").
+•	DHCP Settings: Enable DHCP so that other devices can automatically obtain IP addresses from the router. Ensure the IP range is within the 192.168.10.0/24 subnet.
+________________________________________
+3. Configure the Server
+•	Click on the server device and go to the Desktop tab.
+•	Open the IP Configuration:
+o	Set the IP address to 192.168.10.1 (same as the router).
+o	Subnet Mask: 255.255.255.0
+o	Default Gateway: 192.168.10.1 (same as the router’s IP).
+•	The server will act as the network controller for your IoT devices.
+________________________________________
+4. Configure the PC
+•	Click on the PC and navigate to the Desktop tab.
+•	Open IP Configuration and assign the following:
+o	IP Address: 192.168.10.2
+o	Subnet Mask: 255.255.255.0
+o	Default Gateway: 192.168.10.1 (router’s IP).
+•	This PC will be used to manage the smart home devices.
+________________________________________
+5. Add and Configure the IoT Devices (Fan, Lights, Garage Door)
+•	Add the following IoT devices from the IoT Devices section in Packet Tracer:
+o	Smart Fan
+o	Smart Light
+o	Smart Garage Door
+o	Another Smart Light
+•	Place them around the smart home and configure them to connect to the wireless network.
+For each IoT device:
+•	Click on the device.
+•	Go to the Config tab.
+•	Under Wireless, connect the device to the SSID hello and provide the Wi-Fi password you set earlier (e.g., "password123").
+•	The device should obtain an IP address dynamically from the wireless router.
+________________________________________
+6. Connect Devices to the Network
+•	Ensure all the devices (PC, Server, IoT devices) are connected to the SSID hello and have IP addresses in the 192.168.10.x range (use DHCP or manually configure IPs if necessary).
+•	Confirm that each device is visible on the network:
+o	You can ping the devices from the PC (e.g., ping 192.168.10.3 to check if the smart fan responds).
+________________________________________
+7. Control IoT Devices via the PC
+•	From the PC, go to the Desktop tab.
+•	Open the IoT Monitor application.
+•	The connected IoT devices (fan, lights, garage door) should appear in the IoT Monitor interface.
+•	You can now control the devices from the PC:
+o	Turn on/off the lights.
+o	Open/close the garage door.
+o	Start/stop the fan.
+________________________________________
+8. Advanced Automation (Optional)
+•	If you want to add automation (e.g., the lights turn on when it gets dark), click on the smart device (e.g., light or fan).
+•	Go to the Programming tab and add event-based actions (e.g., set lights to turn on after 6 PM).
+________________________________________
+9. Testing the Setup
+•	From the PC, open the IoT Monitor and interact with the devices:
+o	Turn the fan on/off.
+o	Open/close the garage door.
+o	Control the lights.
+•	Use the ping command to check network connectivity between the devices and the router or server.
+
